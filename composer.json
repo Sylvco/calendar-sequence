@@ -1,0 +1,15 @@
+{
+    "name": "sly/calendar-sequence",
+    "type": "library",
+    "license": "MIT",
+    "description": "",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
