@@ -12,8 +12,7 @@ class Output
 
     public function __construct(
         string $pointInformation
-    )
-    {
+    ) {
         $this->pointInformation = $pointInformation;
     }
 }

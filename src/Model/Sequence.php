@@ -28,10 +28,9 @@ class Sequence
         string $name,
         \DateTime $offsetDate,
         array $points
-    )
-    {
-        $this->name = $name;
+    ) {
+        $this->name       = $name;
         $this->offsetDate = $offsetDate;
-        $this->points = $points;
+        $this->points     = $points;
     }
 }

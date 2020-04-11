@@ -11,8 +11,7 @@ final class SequencePointComputer
     public function computePoint(
         \DateTime $point,
         Sequence $sequence
-    ): SequencePoint
-    {
+    ): SequencePoint {
         if ($point > $sequence->offsetDate) {
             return $this->computePointInFuture($point, $sequence);
         } else {
@@ -43,10 +42,14 @@ final class SequencePointComputer
         );
     }
 
-    private function computePointWith(\DateTime $point, \DateInterval $interval, \DateTime $offsetDate, array $points): SequencePoint
-    {
+    private function computePointWith(
+        \DateTime $point,
+        \DateInterval $interval,
+        \DateTime $offsetDate,
+        array $points
+    ): SequencePoint {
         $currentIndex = 0;
-        $currentDate = $offsetDate;
+        $currentDate  = clone $offsetDate;
         while ($point->diff($currentDate, true)->d > 0) {
             $currentIndex++;
             $currentDate->add($interval);

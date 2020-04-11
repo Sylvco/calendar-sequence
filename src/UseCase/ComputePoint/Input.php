@@ -18,9 +18,8 @@ class Input
     public function __construct(
         \DateTime $point,
         string $sequenceName
-    )
-    {
-        $this->point = $point;
+    ) {
+        $this->point        = $point;
         $this->sequenceName = $sequenceName;
     }
 }
